@@ -15,6 +15,12 @@ class IdeasController < ApplicationController
     @comment = @idea.comments.build
   end
 
+  def search
+    @ideas = Idea.search(params[:term])
+    respond_to do |format|
+      format.html { render :template => "ideas/index"}
+    end
+  end
   # GET /ideas/new
   def new
     @idea = Idea.new

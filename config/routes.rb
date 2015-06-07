@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'pages/info'
   get 'spisak/ideja'
+  get 'ideas/search'
 
   root :to => redirect('/ideas')
   resources :ideas
