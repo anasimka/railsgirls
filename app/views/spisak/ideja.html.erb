@@ -1,0 +1,9 @@
+<ul>
+  <% @ideas.each do |idea| %>
+  <li>
+    <h3> <%= idea.name %> </h3>
+    <div> <%= idea.description %> </div>
+    <%= image_tag(idea.picture_url, :height => 80) if idea.picture.present? %>
+  </li>
+<% end %>
+</ul>
